@@ -126,6 +126,7 @@ namespace CotacoesAriba
                     _playwright = await Playwright.CreateAsync();
                     _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
                     {
+                        ExecutablePath = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
                         Headless = false
                     });
                 }
