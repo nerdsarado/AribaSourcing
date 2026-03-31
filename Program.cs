@@ -9,7 +9,6 @@ class Program
     [STAThread]
     static async Task Main(string[] args)
     {
-        Console.Clear();
 
         // Configurar prioridades UMA VEZ no início
         ConfigurarPrioridades();
