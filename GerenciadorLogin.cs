@@ -907,12 +907,13 @@ namespace CotacoesAriba
                     // Aguardar download com timeout
                     var download = await downloadTask.WaitAsync(TimeSpan.FromSeconds(30));
 
+                    string diretorioDownloads = @"\\SERVIDOR2\Publico\ALLAN\AribaSourcing";
                     string nomeArquivo = download.SuggestedFilename;
                     Console.WriteLine($"\n📥 Download iniciado: {nomeArquivo}");
 
                     // Criar diretório para a empresa
                     Console.WriteLine($"   🏢 Empresa: {empresa}");
-                    string pastaDownloads = Path.Combine("Cotacoes_Ariba", "Downloads", empresa);
+                    string pastaDownloads = Path.Combine(diretorioDownloads, empresa);
                     Directory.CreateDirectory(pastaDownloads);
 
                     // Definir caminho
