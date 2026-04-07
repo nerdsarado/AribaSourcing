@@ -122,7 +122,7 @@ class Program
         Console.WriteLine($"\n✅ Prioridade configurada: {string.Join(" > ", _empresasPrioritarias)}");
         Console.WriteLine("\n" + new string('─', 60));
         Console.WriteLine("Pressione qualquer tecla para iniciar...");
-        Console.ReadKey();
+        Console.Read();
     }
     static async Task Log()
     {
